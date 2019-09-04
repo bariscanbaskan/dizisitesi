@@ -1,0 +1,15 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteCond $1 !^(index\.php|resources|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /dizisitesi/index.php/$1 [L,QSA]
+
+Options -Indexes
+RewriteRule ^uploads/.*\.(php|rb|py|sh|jsp)$ - [F,L,NC]
+RewriteRule ^assets/.*\.(php|rb|py|sh|jsp)$ - [F,L,NC]
+
+#Your server appears to allow access from User-agent Libwww-perl. Botnet scripts that automatically look for vulnerabilities in your software are sometimes identified as User-Agent libwww-perl. By blocking access from libwww-perl you can eliminate many simpler attacks. Read more on blocking Libwww-perl access and improving your website's security.
+RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
+RewriteRule .* ? [F,L]

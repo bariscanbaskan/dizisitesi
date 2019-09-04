@@ -1,0 +1,14 @@
+$bilgi="<script>$(document).ready(function() {'use strict';
+            $(function(){
+            $.gritter.add({
+            title: '$varmi->uyead Egitimin Kalbine Hosgeldiniz!',
+            text: 'Hemen Saðlýk alanýnda kendinizi geliþtirmeye baþlayýn.',
+            class_name: 'with-icon check-circle success',
+            sticky: false,
+            time: ''
+            });
+            return false;
+            });
+            });
+            </script>";
+            $this->session->set_flashdata('bilgi',$bilgi);
