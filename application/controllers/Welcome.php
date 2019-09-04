@@ -11,7 +11,15 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('front/welcome_message');
+		$a = $this->front_model->users();
+		$b = $a[0];
+		print_r($b);
+
+		 /*foreach ($a as $row) {
+		$mail = $row->Email[0] ;
+			echo $mail;
+			echo '<hr>';888
+		}*/
 	}
 
 	public function index1()
