@@ -15,7 +15,7 @@
 	<div class="row">
 		<label for="password">
 			Password:
-			<input type="password" name="Password" id="Password">
+			<input type="password" name="Password" id="Password" >
 		</label>
 	</div>
 	<div class="row">
